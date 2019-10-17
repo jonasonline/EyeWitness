@@ -209,6 +209,7 @@ case ${osinfo} in
   ;;
   # Ubuntu (tested in 13.10) Dependency Installation
   Ubuntu)
+    add-apt-repository ppa:mozillateam/ppa -y
     apt-get update
     echo '[*] Installing Debian Dependencies'
     apt-get install -y cmake python3 xvfb python3-pip python-netaddr python3-dev tesseract-ocr firefox-esr
