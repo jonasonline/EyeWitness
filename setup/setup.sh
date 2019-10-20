@@ -169,10 +169,11 @@ case ${osinfo} in
     apt-get update
     echo '[*] Installing Debian Dependencies'
     apt-get install -y cmake python3 xvfb python3-pip python-netaddr python3-dev tesseract-ocr firefox-esr
+    pip install --upgrade pip
     echo '[*] Upgrading paramiko'
     python3 -m pip install --upgrade paramiko
     echo
-    echo '[*] Installing Python Modules'
+    echo '[*] Installing Python Modules debug'
     python3 -m pip install fuzzywuzzy
     python3 -m pip install selenium --upgrade
     python3 -m pip install python-Levenshtein
