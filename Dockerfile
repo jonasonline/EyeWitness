@@ -15,7 +15,7 @@ RUN export uid=1000 gid=1000 && \
 
 WORKDIR /home/$user
 
-RUN	git clone https://github.com/ChrisTruncer/EyeWitness.git
+RUN	git clone --branch VerifyDockerfilePatch https://github.com/jonasonline/EyeWitness.git
 
 WORKDIR /home/$user/EyeWitness
 
