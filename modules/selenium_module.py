@@ -57,6 +57,7 @@ def create_driver(cli_parsed, user_agent=None):
 
     try:
         capabilities = DesiredCapabilities.FIREFOX.copy()
+        capabilities['marionette'] = False
         capabilities.update({'acceptInsecureCerts': True})
         options = Options()
         options.add_argument("--headless")
