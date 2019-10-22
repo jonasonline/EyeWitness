@@ -213,10 +213,10 @@ case ${osinfo} in
   ;;
   # Ubuntu (tested in 13.10) Dependency Installation
   Ubuntu)
-    add-apt-repository ppa:mozillateam/ppa -y
+    #add-apt-repository ppa:mozillateam/ppa -y
     apt-get update
     echo '[*] Installing Debian Dependencies'
-    apt-get install -y cmake python3 xvfb python3-pip python-netaddr python3-dev tesseract-ocr firefox x11-utils
+    apt-get install -y cmake python3 xvfb python3-pip python-netaddr python3-dev tesseract-ocr firefox #x11-utils
     pip3 install --upgrade pip
     echo '[*] Upgrading paramiko'
     python3 -m pip install --upgrade paramiko
