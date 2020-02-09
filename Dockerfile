@@ -15,7 +15,9 @@ RUN export uid=1000 gid=1000 && \
 
 WORKDIR /home/$user
 
-RUN	git clone https://github.com/FortyNorthSecurity/EyeWitness.git
+#RUN	git clone https://github.com/FortyNorthSecurity/EyeWitness.git
+#Testing patch
+RUN	git clone --branch patch-webdrivererror https://github.com/jonasonline/EyeWitness.git 
 
 WORKDIR /home/$user/EyeWitness
 

@@ -74,6 +74,8 @@ def create_driver(cli_parsed, user_agent=None):
         capabilities.update({'acceptInsecureCerts': True})
         options = Options()
         options.add_argument("--headless")
+        profile.setAcceptUntrustedCertificates = True 
+        profile.setAssumeUntrustedCertificateIssuer = False
         profile.update_preferences()
         driver = webdriver.Firefox(profile, capabilities=capabilities, firefox_options=options)
         driver.set_page_load_timeout(cli_parsed.timeout)
